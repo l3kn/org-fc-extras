@@ -20,3 +20,26 @@ from within Emacs.
 Two lookup schemes are implemented, either using top-level headings
 or a special ~KEY~ property so e.g. Russian words can be looked up
 by typing in their transliteration.
+
+* org-fc-colors
+
+Changes the background color of headings to make review sessions
+a bit more interesting.
+
+Based on a list of ~(tags . color)~ pairs, the first pair whose tags
+are a subset of the headings tags is used to color the flashcard.
+
+#+begin_src emacs-lisp
+  (require 'org-fc-color)
+
+  (setq org-fc-color-colors
+    '((("dict" "noun" "m") . "blue")
+      (("dict" "noun" "n") . "dark magenta")
+      (("dict" "noun" "f") . "red")
+      (("dict" "verb" "imperf") . "yellow")
+      (("dict" "verb" "both") . "green")
+      (("dict" "verb" "perf") . "dark green")
+      (("dict" "adj") . "dark orange")
+      (("dict" "adv") . "maroon")
+      (("dict") . "gray")))
+#+end_src
