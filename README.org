@@ -1,0 +1,22 @@
+#+TITLE: Org-fc Extras
+
+This is a collection of extensions and packages designed to be used in
+combination with org-fc.
+
+* org-fc-dict
+
+While it is convenient to store dictionaries directly in org-mode
+files to avoid manually typing in entries for new words you'd like to
+learn and to allow offline usage, they have to be split up into
+multiple smaller files so each individual file can be opened and
+reviewed quickly.
+
+With ~org-fc-dict~ you can define dictionaries by specifying a
+directory these files are located in together with a lookup scheme.
+The locations of individual words are then cached (under the
+assumption that headings don't move between files) for quick lookup
+from within Emacs.
+
+Two lookup schemes are implemented, either using top-level headings
+or a special ~KEY~ property so e.g. Russian words can be looked up
+by typing in their transliteration.
